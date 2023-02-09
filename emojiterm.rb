@@ -5,11 +5,11 @@
 class Emojiterm < Formula
   desc ""
   homepage "https://github.com/wunderkind2k1/emojiterm"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
-    url "https://github.com/wunderkind2k1/emojiterm/releases/download/v0.0.1/emojiterm_0.0.1_Darwin_all.tar.gz"
-    sha256 "531dfb91f6e96c2a9213370e6ab23a3790b2ea41d9b3ed32ea56f3890df4ba8c"
+    url "https://github.com/wunderkind2k1/emojiterm/releases/download/v0.0.2/emojiterm_0.0.2_Darwin_all.tar.gz"
+    sha256 "46c05635477ade5cdd910a88daa6e6e5a448bd8e9d53f31d506fd65e3fce77ed"
 
     def install
       bin.install "emojiterm"
@@ -17,25 +17,25 @@ class Emojiterm < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/wunderkind2k1/emojiterm/releases/download/v0.0.1/emojiterm_0.0.1_Linux_armv6.tar.gz"
-      sha256 "47f56bd455124a06488f476636d25bec4a46bd74ea65d79fc48e156ecbebab6a"
+    if Hardware::CPU.intel?
+      url "https://github.com/wunderkind2k1/emojiterm/releases/download/v0.0.2/emojiterm_0.0.2_Linux_x86_64.tar.gz"
+      sha256 "7ec2f211cc5a00f16787fef8d20d0007f2cc53de064836ca06287960f9bc75a9"
 
       def install
         bin.install "emojiterm"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/wunderkind2k1/emojiterm/releases/download/v0.0.1/emojiterm_0.0.1_Linux_x86_64.tar.gz"
-      sha256 "225a7711a0f441ee53c738eb5209625d158cbbb3b6e547e54cdc21d315d006da"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/wunderkind2k1/emojiterm/releases/download/v0.0.2/emojiterm_0.0.2_Linux_armv6.tar.gz"
+      sha256 "eea0b6c14747e492d5a106b8f8da979aa99d6bf660d7af54cf183a07dc507446"
 
       def install
         bin.install "emojiterm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wunderkind2k1/emojiterm/releases/download/v0.0.1/emojiterm_0.0.1_Linux_arm64.tar.gz"
-      sha256 "7c64783d7165636e6a28c8d3c6198fde053d0236400cd97992c60469c654c40d"
+      url "https://github.com/wunderkind2k1/emojiterm/releases/download/v0.0.2/emojiterm_0.0.2_Linux_arm64.tar.gz"
+      sha256 "831b641f1bbdd42491aaca3cd1cab3fb62b3595776762a740e8794f65bd1de5c"
 
       def install
         bin.install "emojiterm"
